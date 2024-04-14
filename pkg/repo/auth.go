@@ -1,13 +1,13 @@
 package repo
 
 import (
-	"carpark-server/pkg/model"
-	"carpark-server/pkg/utils"
 	"context"
 	"gitlab.com/goxp/cloud0/ginext"
 	"gitlab.com/goxp/cloud0/logger"
 	"gorm.io/gorm"
 	"net/http"
+	"parking-server/pkg/model"
+	"parking-server/pkg/utils"
 )
 
 func (r *RepoPG) GetOneUserByPhone(ctx context.Context, phoneNumber string, tx *gorm.DB) (*model.User, error) {

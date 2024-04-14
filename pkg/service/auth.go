@@ -1,9 +1,9 @@
 package service
 
 import (
-	"carpark-server/pkg/model"
-	"carpark-server/pkg/repo"
 	"context"
+	"parking-server/pkg/model"
+	"parking-server/pkg/repo"
 )
 
 type AuthService struct {

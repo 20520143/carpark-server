@@ -1,13 +1,14 @@
 package repo
 
 import (
-	"carpark-server/pkg/model"
-	"carpark-server/pkg/utils"
 	"context"
 	"errors"
 	"fmt"
+	"github.com/google/uuid"
 	"math"
 	"net/http"
+	"parking-server/pkg/model"
+	"parking-server/pkg/utils"
 	"runtime/debug"
 	"time"
 
@@ -40,6 +41,34 @@ type PGInterface interface {
 
 	//user
 	GetOneUserByPhone(ctx context.Context, phoneNumber string, tx *gorm.DB) (*model.User, error)
+
+	// Parking lot
+	CreateParkingLot(ctx context.Context, req *model.ParkingLot) error
+	GetOneParkingLot(ctx context.Context, id uuid.UUID) (model.ParkingLot, error)
+	GetListParkingLot(ctx context.Context, req model.ListParkingLotReq) (model.ListParkingLotRes, error)
+	UpdateParkingLot(ctx context.Context, req *model.ParkingLot) error
+	DeleteParkingLot(ctx context.Context, id uuid.UUID) error
+
+	// Block
+	CreateBlock(ctx context.Context, req *model.Block) error
+	GetOneBlock(ctx context.Context, id uuid.UUID) (model.Block, error)
+	GetListBlock(ctx context.Context, req model.ListBlockReq) (model.ListBlockRes, error)
+	UpdateBlock(ctx context.Context, req *model.Block) error
+	DeleteBlock(ctx context.Context, id uuid.UUID) error
+
+	// ParkingSlot
+	CreateParkingSlot(ctx context.Context, req *model.ParkingSlot) error
+	GetOneParkingSlot(ctx context.Context, id uuid.UUID) (model.ParkingSlot, error)
+	GetListParkingSlot(ctx context.Context, req model.ListParkingSlotReq) (model.ListParkingSlotRes, error)
+	UpdateParkingSlot(ctx context.Context, req *model.ParkingSlot) error
+	DeleteParkingSlot(ctx context.Context, id uuid.UUID) error
+
+	// Vehicle
+	CreateVehicle(ctx context.Context, req *model.Vehicle) error
+	GetOneVehicle(ctx context.Context, id uuid.UUID) (model.Vehicle, error)
+	GetListVehicle(ctx context.Context, req model.ListVehicleReq) (model.ListVehicleRes, error)
+	UpdateVehicle(ctx context.Context, req *model.Vehicle) error
+	DeleteVehicle(ctx context.Context, id uuid.UUID) error
 }
 
 type RepoPG struct {

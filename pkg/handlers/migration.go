@@ -14,10 +14,8 @@ func NewMigrationHandler(db *gorm.DB) *MigrationHandler {
 }
 
 func (h *MigrationHandler) Migrate(ctx *gin.Context) {
-
 	_ = h.db.Exec("CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\"")
-	_ = h.db.Exec("ALTER TABLE IF EXISTS intern DROP CONSTRAINT IF EXISTS unique_phone_deleted_at")
-	_ = h.db.Exec("ALTER TABLE IF EXISTS intern DROP CONSTRAINT IF EXISTS unique_dept_id_rank")
+
 	models := []interface{}{
 		// TO DEMO
 	}
@@ -28,7 +26,4 @@ func (h *MigrationHandler) Migrate(ctx *gin.Context) {
 			return
 		}
 	}
-
-	_ = h.db.Exec("ALTER TABLE intern ADD CONSTRAINT unique_phone_deleted_at UNIQUE(phone_number, deleted_at)")
-	_ = h.db.Exec("ALTER TABLE intern ADD CONSTRAINT unique_dept_id_rank UNIQUE(dept_id, rank)")
 }
