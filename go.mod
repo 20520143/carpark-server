@@ -1,4 +1,4 @@
-module carpark-server
+module parking-server
 
 go 1.21
 

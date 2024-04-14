@@ -1,16 +1,16 @@
 package route
 
 import (
-	"carpark-server/conf"
-	"carpark-server/pkg/handlers"
-	"carpark-server/pkg/repo"
-	service2 "carpark-server/pkg/service"
 	"fmt"
 	"github.com/caarlos0/env/v6"
 	swaggerFiles "github.com/swaggo/files"
 	swagger "github.com/swaggo/gin-swagger"
 	"gitlab.com/goxp/cloud0/ginext"
 	"gitlab.com/goxp/cloud0/service"
+	"parking-server/conf"
+	"parking-server/pkg/handlers"
+	"parking-server/pkg/repo"
+	service2 "parking-server/pkg/service"
 )
 
 type extraSetting struct {
@@ -24,7 +24,7 @@ type Service struct {
 
 func NewService() *Service {
 	s := &Service{
-		service.NewApp("CarPark", "v1.0"),
+		service.NewApp("Parking", "v1.0"),
 		&extraSetting{},
 	}
 	// repo

@@ -1,12 +1,12 @@
 package utils
 
 import (
-	"carpark-server/pkg/model"
 	"database/sql/driver"
 	"fmt"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"parking-server/pkg/model"
 	"reflect"
 	"regexp"
 	"runtime"

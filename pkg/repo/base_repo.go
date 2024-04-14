@@ -1,14 +1,14 @@
 package repo
 
 import (
-	"carpark-server/pkg/model"
-	"carpark-server/pkg/utils"
 	"context"
 	"errors"
 	"fmt"
 	"github.com/google/uuid"
 	"math"
 	"net/http"
+	"parking-server/pkg/model"
+	"parking-server/pkg/utils"
 	"runtime/debug"
 	"time"
 

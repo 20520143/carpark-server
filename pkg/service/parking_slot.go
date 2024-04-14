@@ -1,12 +1,12 @@
 package service
 
 import (
-	"carpark-server/pkg/model"
-	"carpark-server/pkg/repo"
-	"carpark-server/pkg/utils"
-	"carpark-server/pkg/valid"
 	"context"
 	"github.com/google/uuid"
+	"parking-server/pkg/model"
+	"parking-server/pkg/repo"
+	"parking-server/pkg/utils"
+	"parking-server/pkg/valid"
 )
 
 type ParkingSlotService struct {

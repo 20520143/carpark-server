@@ -1,12 +1,12 @@
 package handlers
 
 import (
-	"carpark-server/pkg/model"
-	"carpark-server/pkg/service"
-	"carpark-server/pkg/utils"
 	"gitlab.com/goxp/cloud0/ginext"
 	"gitlab.com/goxp/cloud0/logger"
 	"net/http"
+	"parking-server/pkg/model"
+	"parking-server/pkg/service"
+	"parking-server/pkg/utils"
 )
 
 type AuthHandler struct {

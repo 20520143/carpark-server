@@ -1,18 +1,18 @@
 package main
 
 import (
-	"carpark-server/pkg/route"
-	"carpark-server/pkg/utils"
 	"context"
 	"gitlab.com/goxp/cloud0/logger"
 	"os"
+	"parking-server/pkg/route"
+	"parking-server/pkg/utils"
 )
 
 const (
-	APPNAME = "CarPark"
+	APPNAME = "Parking"
 )
 
-// @title CarPark API
+// @title Parking API
 // @version 1.0
 // @description This is MVT Adapter api docs.
 // @termsOfService http://swagger.io/terms/

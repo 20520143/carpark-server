@@ -1,9 +1,6 @@
 package repo
 
 import (
-	"carpark-server/pkg/model"
-	"carpark-server/pkg/utils"
-	"carpark-server/pkg/valid"
 	"context"
 	"errors"
 	"github.com/google/uuid"
@@ -11,6 +8,9 @@ import (
 	"gitlab.com/goxp/cloud0/logger"
 	"gorm.io/gorm"
 	"net/http"
+	"parking-server/pkg/model"
+	"parking-server/pkg/utils"
+	"parking-server/pkg/valid"
 )
 
 func (r *RepoPG) CreateBlock(ctx context.Context, req *model.Block) error {
